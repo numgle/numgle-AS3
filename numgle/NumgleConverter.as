@@ -21,7 +21,7 @@
 				if(nucleus >= 8 && nucleus !=20){
 					return dataset.jong[coda] + dataset.jung[nucleus - 8] + dataset.cho[onset];
 				}
-				return dataset.jong[coda] + dataset.cj[Math.min(8, nucleus)][coda];
+				return dataset.jong[coda] + dataset.cj[Math.min(8, nucleus)][onset];
 			}
             else if (letter >= 0x3131 && letter <= 0x3163){
 				var index = letter - 0x3131;
