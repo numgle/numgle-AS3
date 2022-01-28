@@ -2,10 +2,11 @@
 {
 	public class DatasetLoader
 	{
+		import com.brokenfunction.json.JsonDecoderAsync;
 		import flash.net.*;
 		import flash.events.*;
 		private var _loadedSet;
-		private var urlRequest:URLRequest = new URLRequest("https://raw.githubusercontent.com/numgle/dataset/main/src/data.json");
+		private var urlRequest:URLRequest = new URLRequest("https://pastebin.com/raw/5Wu0vZBX");
 		private var loader:URLLoader = new URLLoader();
 
 		function DatasetLoader()
@@ -29,7 +30,8 @@
 
 		private function completeHandler(event):void
 		{
-			_loadedSet = JSON.parse(event.target.data);
+			trace(event.target.data);
+			_loadedSet = (new JsonDecoderAsync(event.target.data)).result; 
 		}
 
 	}

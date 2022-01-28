@@ -24,7 +24,7 @@
 		}
 		public function update():String
 		{
-			
+			_datasetLoader.Update();
 			return responseSuccess("Update");
 		}
 	}
